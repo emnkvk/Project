@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* Header CSS */
+
+.header {
+  background-color: rgba(207, 201, 201, 0.514);
+  display: flex;
+  height: 110px;
+  /* sagdan soldan ve aralarini acmak icin */
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  /* Yukariya sabitlemek icin top 0 kullaniyoruz */
+  top: 0;
+}
+.header .tittle h1 {
+  color: rgba(208, 151, 67, 0.622);
+}
+
+.header .tittle h1 span {
+  color: cadetblue;
+}
+.header .tittle h1 i {
+  color: darksalmon;
+}
+.header .nav ul {
+  display: flex;
+}
+.header .nav ul li {
+  list-style-type: none;
+}
+.header .nav ul li a {
+  text-decoration: none;
+  color: rgba(95, 158, 160, 0.5);
+  font-size: 25px;
+  margin-right: 10px;
+  transition: all 0.5;
+}
+.header .nav ul li a:hover {
+  color: tomato;
+  cursor: pointer;
+}
+
+/* Main Area CSS */
+.main {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: bisque;
+}
+.main .info {
+  height: 100%;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.main .info h1 {
+  color: rgb(207, 100, 23);
+}
+.main .info p {
+  color: black;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+.main .info p b {
+  color: coral;
+}
+.main .info button {
+  border: none;
+  background-color: tomato;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main .info button:hover {
+  background-color: rgb(215, 160, 150);
+  transform: scale(0.9);
+}
+
+/* Table CSS */
+.table-container {
+  width: 80%;
+  margin: 20px auto;
+}
+.table-container table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  color: bisque;
+}
+th,
+td {
+  padding: 8px;
+  border: 1px solid gray;
+}
+td:hover {
+  background-color: darkseagreen;
+  transition: all 0.5s;
+}
+th {
+  background-color: rgb(42, 28, 113);
+}
+
+/* Form Area CSS */
+
+.form-container {
+  width: 80%;
+
+  height: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 228, 196, 0.341);
+  border-radius: 5px;
+  margin-top: 100px;
+  background-color: bisque;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+#name,
+#email,
+#message {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(18, 40, 55);
+}
+
+.btn-container {
+  position: relative;
+}
+.btn {
+  background-color: tomato;
+  position: absolute;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn:hover {
+  background-color: rgb(215, 160, 150);
+  font-weight: bold;
+  color: black;
+  transform: scale(0.9);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer-container {
+  background-color: antiquewhite;
+  height: 110px;
+  color: black;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Html ile olusturuan yapilarinn  
+tum cihazlarda uyumlu sekilde 
+calismasi durumuna responsive yapi denir */
+
+/* Bu ozellik UI gelistirme noktasinda onemlidir. 
+Cunku bu sayede her cihaz icin guzel arayuzler elde ederiz */
+
+/* responsive tasarim icin 'media etiketleri kullanilir. Bu yapi olusturulurken 
+@media yapisi cagrilir ve yaninda hangi ekran boyutunda hangi ozelliklere sahip olmasi 
+gerektigi belirtili */
+
+/*orn: ekran belirlle genislik altina dusunce uyumsuz yapilar icin bu ozellik kullanilir  */
+
+@media (max-width: 800px) {
+  .header .nav {
+    display: none;
+  }
+  /* 
+  .header .tittle h1 {
+    font-size: 60px;
+  } */
+}
